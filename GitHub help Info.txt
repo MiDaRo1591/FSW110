@@ -1,0 +1,27 @@
+git add -A
+Git command to find all file changes/additions to get ready to send to github
+
+git commit -m “message”
+Git command for creating a save point for your current code to make it ready for storage on github
+
+git push
+Git command to send your code to github
+
+
+
+
+
+git status
+Git command to see the current status of files in your local repository
+
+git clone
+Git command to make a copy to your computer of a repository found on github
+
+git init
+Git command to initialize a new local git repository
+
+
+
+
+
+https://github.com/MiDaRo1591/FSW110.git
