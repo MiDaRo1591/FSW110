@@ -1,0 +1,23 @@
+        /*
+        We're going to start with a white, 100 pixel square box
+        All text within the box will be centered
+        50 pixels in the margin to distance it from the edge
+        With a solid black boarder that is 5 pixels wide
+        and a padded area for the text that is 10 pixels.
+        */
+div.TheSquarePage
+    {
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        background-color: white;
+    
+        margin-top: 50px;
+        margin-left: 50px;
+    
+        border-color: black;
+        border-width: 5px;
+        border-style: solid;
+    
+        padding: 10px;
+    }

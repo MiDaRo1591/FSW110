@@ -13,7 +13,7 @@ This assignment will help you practice adding CSS styles to elements created in 
         Font-family: sans-serif
         Color: cornflowerblue
 
-4. Go to your CSS file and create a class called .border that has:
+    4. Go to your CSS file and create a class called .border that has:
 
     2px solid black border,
     5px padding
@@ -38,13 +38,13 @@ for (let i = 1; i < 6; i++)
 var lItem = document.createElement('h2'); // Create the new element here.
 lItem.textContent = 'This is just some filler text for the H2 element Numer '+i+"."; // Text fill in so we have something to read.
 lItem.id = "h2element"+i; // Set the ID so we can grab it later.
-lItem.classList.add("border"); // The class from the .css file.
+
+lItem.classList.add('border'); // The class from the .css file.
+
 document.body.appendChild(lItem); // Apply the change to the parent element.
 console.log(lItem); // Log Check
  Reset(lItem); // Function for quick restyling.
 }
-
-//document.getElementById("myDIV").classList.add(".border");
 
 /*
 // So I didn't know if you wanted me to use that function earlier which I went ahead and did.
