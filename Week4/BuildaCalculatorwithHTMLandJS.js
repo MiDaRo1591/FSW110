@@ -12,19 +12,20 @@ function mathMatical(iNum1 = 1, iNum2 = 2, iNum3 = 3)
     iNum3 = parseInt(iNum3.textContent); // Change Display 3 Into an intiger
     var iReturn = "Null";
     
-    if(iNum2.textContent == "Plus")
-    {iReturn = iNum1 + iNum3;}
+    if(iNum2 == "Plus")
+    {iReturn = iNum1 + iNum3;
+    console.log("Rechecking")}
 
-    if(iNum2.textContent == "Minus")
+    if(iNum2 == "Minus")
     {iReturn = iNum1 - iNum3;}
 
-    if(iNum2.textContent == "Multiply")
+    if(iNum2 == "Multiply")
     {iReturn = iNum1 * iNum3;}
     
-    if(iNum2.textContent == "Divide")
+    if(iNum2 == "Divide")
     {iReturn = iNum1 / iNum3;}
     
-    else{iReturn = "No...";}
+    // else{iReturn = "No...";}
 
     oDisplay4.textContent = iReturn; // Display the Result
 }
