@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- 
+For this project, you are going to create a simple calculator that can add, subtract, and multiply.
+
+Requirements:
+
+You will have one section (<div>) for each math operation (so 3 sections) total
+Each section has two inputs to take the first and second numbers
+Each section will have a button to perform the operation
+You will inject the result into the HTML (not an alert)
+Your website will have 3 colors
+Your website will have proper padding/spacing to lay things out nicely.
+
+** Forms are covered in the next week, so for this you will use <input /> 
+tags, give them an “id”, and use click events to capture the values and 
+append the appropriate output to the DOM.
+-->
+<html lang="en-us">
+    <head>
+        <title>Build a Calculator</title>
+        
+        <link href = "BuildaCalculatorwithHTMLandJS.css" rel = "stylesheet"/>
+    </head>
+    <body>
+        <div id = "calculatorDisplay" class = calculatorDisplay>
+            <p id = pDisplay1></p>
+            <p id = pDisplay2></p>
+            <p id = pDisplay3>0</p>
+            <p id = pDisplay4></p>
+        </div>
+
+        <p></p>
+
+        <div id = "calculatorButtonsAdd" class = "calculatorButtonsPage"> <!-- The Buttons Page -->
+            <div class = "calculatorButtonsRow">                          <!-- The Buttons Row -->
+                <p id = "p7" class = calculatorButtonsButtons>7</p>       <!-- The Buttons Buttons -->
+                <p id = "p4" class = calculatorButtonsButtons>4</p>       <!-- The Buttons Buttons -->
+                <p id = "p1" class = calculatorButtonsButtons>1</p>       <!-- The Buttons Buttons -->
+                <p id = "pC" class = calculatorButtonsButtons>C</p>
+            </div>
+
+            <div class = "calculatorButtonsRow">
+                <p id = "p8" class = calculatorButtonsButtons>8</p>
+                <p id = "p5" class = calculatorButtonsButtons>5</p>
+                <p id = "p2" class = calculatorButtonsButtons>2</p>
+                <p id = "p0" class = calculatorButtonsButtons>0</p>
+            </div>
+            
+            <div class = "calculatorButtonsRow">
+                <p id = "p9" class = calculatorButtonsButtons>9</p>
+                <p id = "p6" class = calculatorButtonsButtons>6</p>
+                <p id = "p3" class = calculatorButtonsButtons>3</p>
+                <p id = "pD" class = calculatorButtonsButtons>/</p>
+            </div>
+            
+            <div class = "calculatorButtonsRow">
+                <p id = "pM" class = calculatorButtonsButtons>X</p>
+                <p id = "pS" class = calculatorButtonsButtons>-</p>
+                <p id = "pA" class = calculatorButtonsButtons>+</p>
+                <p id = "pE" class = calculatorButtonsButtons>=</p>
+            </div>
+
+        </div>
+            
+        <script src = "BuildaCalculatorwithHTMLandJS.js"></script>
+    </body>
+</html>

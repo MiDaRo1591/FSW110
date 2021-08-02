@@ -1,0 +1,73 @@
+        /*
+        Start with a light grey, 180 by 75 pixel box.
+        All text within the box will be centered, not that that we need to.
+        Margin distance to the edge will be auto.
+        With a solid black boarder that is 5 pixels wide.
+        And a padded area for the text that is 20 pixels.
+        */
+        div.calculatorButtonsPage
+        {
+            height: 180px;
+            width: 100px;
+            text-align: center;
+            background-color: lightgrey;
+        
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+        
+            border-color: black;
+            border-width: 5px;
+            border-style: solid;
+        
+            padding: 20px;
+        }
+        /*
+        Buttons Rows will need to Align to the Left
+        */
+        div.calculatorButtonsRow
+        {
+            float: left;
+        }
+        /*
+        Start with a light grey, 20 by 10 pixel box.
+        All text within the box will be centered.
+        Margin distance to the edge will be 2 Pixels.
+        With a solid black boarder that is 1 pixel.
+        And a padded area for the text that is 5 pixels.
+        */
+        p.calculatorButtonsButtons
+        {
+            height: 20px;
+            width: 10px;
+            text-align: center;
+            background-color: white;
+        
+            margin-top: 2px;
+            margin-left: 2px;
+        
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+        
+            padding: 5px;    
+        }
+        div.calculatorDisplay
+        {
+            height: 150px;
+            width: 120px;
+            text-align: center;
+            background-color: lightgrey;
+        
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+        
+            border-color: black;
+            border-width: 5px;
+            border-style: solid;
+        
+            padding: auto;
+        }
