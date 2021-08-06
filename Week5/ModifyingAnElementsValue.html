@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 
+It is important to note that any button placed inside of <form> tags will automatically fire a “submit” 
+event for the form to capture and use. Your task for this assignment is to create a form on an html file 
+that has at least 3 inputs and a button.
+
+When the button is clicked, the inputs should be displayed in an “alert” window using the alert() method.  
+After the alert is closed, the inputs should clear themselves out.
+-->
+<html lang="en-us">
+    <head>
+        <title>Modifying An Element's Value</title>
+        
+        <!-- <link href = "ModifyingAnElementsValue.css" rel = "stylesheet"/> <!-- Link Style Sheet -->
+    </head>
+    <body>
+        <!--
+
+        It is important to note that any button placed inside of <form> tags will 
+        automatically fire a “submit” event for the form to capture and use. 
+        Your task for this assignment is to create a form on an html file that 
+        has at least 3 inputs and a button.
+
+
+        When the button is clicked, the inputs should be displayed in an “alert” 
+        window using the alert() method.  
+        After the alert is closed, the inputs should clear themselves out.
+
+            1 Need button with ID text comments, all that good stuff
+            2 in jsc, select button, eventlistener (clicking)
+            3 function for event listener bet by ID the three inputs, save as variabls (or use the same one for less code)
+            4 build string using value of the input
+        5 put the alert with the string inside of the alert
+
+        -->
+    <div>
+        <input type = "text" id = "textInput1" value = "Placeholder 1"/>
+        <input type = "text" id = "textInput2" value = "Placeholder 2"/>
+        <input type = "text" id = "textInput3" value = "Placeholder 3"/>
+        <button type="button" onclick="buttonPressedAlert()">Clear All</button>
+    </div>
+
+        <script src = "ModifyingAnElementsValue.js"></script> <!-- Link Javascript -->
+    </body>
+</html>
