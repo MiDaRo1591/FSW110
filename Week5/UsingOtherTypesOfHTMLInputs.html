@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- 
+https://www.w3schools.com/tags/default.asp
+-->
+<html lang="en-us">
+    <head>
+        <title>Emplo-yeet Information</title>
+        
+        <!-- <link href = "styles.css" rel = "stylesheet"/> <!-- Link Style Sheet -->
+    </head>
+    <style>
+        /* Styles can be added here.*/
+        @media only screen and (max-width: 767px) /* Phone */
+        {}
+        @media only screen and (min-width: 768px) and (max-width: 1365px) /* Tablet */
+        {}
+        @media only screen and (min-width: 1366px) and (max-width: 1919px) /* Low Res */
+        {}
+        @media only screen and (max-width: 1920px) /* High Res*/
+        {}
+    </style>
+    <body>
+
+        <!--
+You just started your own company, and you need to collect data 
+about your customers for your marketing team. This is a perfect 
+example of using forms within a web application — to obtain user 
+data.
+You should collect the following information from the user:
+
+First name (text input)
+Last name (text input)
+Age (number input)
+A question that has a yes or no answer (should use radio buttons) 
+ex) Have you shopped with us before?
+
+A question with a single possible response but multiple options 
+(select box with at least 3 options) 
+ex) How likely are you to recommend this product to a friend? 
+[not likely, somewhat likely, likely, ... etc]
+
+A question with multiple possible answers (check boxes with at least 3 options) 
+ex) Do you have any dietary restrictions? [gluten free, keto, vegetarian, .... etc]
+
+Each element of the form should be given a name attribute so you 
+can access the data in JavaScript and do stuff with it.
+        -->
+        <h1>Employee ID Information: <input type = "text" id = "idID" value = ""/></h1>
+        <p> First Name: <input type = "text" id = "idInput1stName" value = ""/> 
+            Last Name: <input type = "text" id = "idInput3rdName" value = ""/></p>
+
+        <p> Age: <input type = "text" id = "idInputAge" value = ""/></p>
+
+        <p> Work Area: <input type = "text" id = "idInputArea" value = ""/></p>
+
+        <input type = "checkbox" id = "idInputPlace1" name = "manager" value = "Manager">  <label for="Manager"> Area Manager</label><br>
+        <input type = "checkbox" id = "idInputPlace2" name = "lead" value = "Lead">        <label for="Lead"> Area Lead</label><br>
+        <input type = "checkbox" id = "idInputPlace3" name = "crew" value = "Crew">        <label for="Crew"> Area Crew</label><br>
+
+        <p> Important Skills: <input type = "text" id = "idInputSkill1" value = ""/>
+                              <input type = "text" id = "idInputSkill2" value = ""/>
+                              <input type = "text" id = "idInputSkill3" value = ""/></p>
+        
+    <button type = "button" onclick = "playBackOption()">Submit Data</button>
+
+        <!-- <script src = "JavaScript.js"></script> <!-- Link Javascript -->
+    </body>
+    <script>
+        // Javascript Go's Here
+
+        var sID = document.getElementById("idID");
+        var sFirstName = document.getElementById("idInput1stName");
+        var sLastName = document.getElementById("idInput3rdName");
+        var sAge = document.getElementById("idInputAge");
+        var sArea = document.getElementById("idInputArea");
+            var sPlace = "crew";
+            var sPlace1 = document.getElementById("idInputPlace1");
+            var sPlace2 = document.getElementById("idInputPlace2");
+            var sPlace3 = document.getElementById("idInputPlace3");
+        var sSkill1 = document.getElementById("idInputSkill1");
+        var sSkill2 = document.getElementById("idInputSkill2");
+        var sSkill3 = document.getElementById("idInputSkill3");
+        console.log("Check")
+
+        function playBackOption()
+        {
+            
+        console.log(sID);
+        console.log(sFirstName);
+        console.log("Button Check");
+
+            if(sPlace3.checked == true){sPlace = "Crew";}
+            if(sPlace2.checked == true){sPlace = "Lead";}
+            if(sPlace1.checked == true){sPlace = "Manager";}
+
+            var sText = 
+            "ID: "+sID.value+"\n"+
+            "Name: "+sFirstName.value+" "+sLastName.value+"\n"+
+            "Age: "+sAge.value+"\n"+
+            "Designated Area: "+sArea.value+" "+sPlace+"\n"+
+            "Skills: "+sSkill1.value+", "+sSkill2.value+", and "+sSkill3.value+".";
+
+            alert(sText);
+        }
+
+        //I misunderstood the asignment ignore all this...
+    /*
+    var Employeet = document.cookie;
+        // Javascript Go's Here
+    console.log(Employeet);
+            var sArea1 = document.getElementById("idInputPlace1");
+            var sArea2 = document.getElementById("idInputPlace2");
+            var sArea3 = document.getElementById("idInputPlace3");
+        //////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////
+        function getCookie()
+        {
+            // All of this information is set to the document after getting the cookies
+            console.log("Get Data");
+            Employeet = document.cookie;
+            console.log(Employeet);
+            document.getElementById("idID").value = Employeet.sID;
+            document.getElementById("idInput1stName").value = Employeet.sFirstName;
+            document.getElementById("idInput3rdName").value = Employeet.sLastName;
+            document.getElementById("idInputAge").value = Employeet.sAge;
+            document.getElementById("idInputArea").value = Employeet.sArea;
+            document.getElementById("idInputSkill1").value = Employeet.sSkill1;
+            document.getElementById("idInputSkill2").value = Employeet.sSkill2;
+            document.getElementById("idInputSkill3").value = Employeet.sSkill3;
+        }
+        //////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////
+        function setCookies()
+        {
+            // All of this information is set to the cookies after getting the document
+            console.log("Set Data");
+            var Employeet = 
+                {
+                sID: document.getElementById("idID").value,
+                sFirstName: document.getElementById("idInput1stName").value,
+                sLastName: document.getElementById("idInput3rdName").value,
+                sAge: document.getElementById("idInputAge").value,
+                sArea: document.getElementById("idInputArea").value,
+                sSkill1: document.getElementById("idInputSkill1").value,
+                sSkill2: document.getElementById("idInputSkill2").value,
+                sSkill3: document.getElementById("idInputSkill3").value 
+                }
+            console.log(Employeet);
+            document.cookie = Employeet;
+        }
+        //////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////
+    */
+    </script>
+</html>
