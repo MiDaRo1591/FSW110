@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- 
+https://www.w3schools.com/tags/default.asp
+-->
+<html lang="en-us">
+    <head>
+        <title>Build A Website With Form</title>
+    </head>
+    <style>
+        img.display
+        {
+        height: 100px;
+        width: 100px;
+        }
+        .footnotepage
+        {
+        width: 300px;
+        font-size: 10px;
+        /*font-family: 'Apple', cursive;*/
+        background-color: lightgrey;
+        padding: 10px;
+        }  
+        .headerpage
+        {
+        width: 300px;
+        font-size: 50px;
+        align-content: center;
+        color: rgb(0, 175, 255);
+        /*font-family: 'Apple', cursive;*/
+        background-color: rgb(155, 0, 125);
+        margin: 0 auto;
+        padding: 10px;
+        }
+        .mainpage
+        {
+        padding: 10px;
+        }
+    @media only screen and (max-width: 767px) /* Phone */
+    {
+        img.display
+        {
+        height: 100px;
+        width: 100px;
+        }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1365px) /* Tablet */
+    {
+        img.display
+        {
+        height: 200px;
+        width: 200px;
+        }
+        .footnotepage
+        {
+        align-content: center;
+        margin: 0 auto;
+        }
+    }
+    @media only screen and (min-width: 1366px) /* Computer */
+    {
+        img.display
+        {
+        height: 250px;
+        width: 250px;
+        }
+        .footnotepage
+        {
+        text-align: center;
+        align-content: center;
+        margin: 0 auto;
+        }
+    }
+    </style>
+    <body>
+        <div class = 'headerpage'>
+            <p>Ross Bakery</p>
+        </div>
+
+        <p></p> <!-- Spacing -->
+
+        <div class = 'mainpage' id = 'main'></div> <!-- Wrapper for adding more items. -->
+
+        <p></p><!-- Spacing -->
+        <div>
+            <h1 id = "grandTotal">Your total is $0.</h1>
+        </div>
+
+        <div class = 'footnotepage'> <!-- Give credit where it is due. -->
+            <p>
+                <a href='https://unsplash.com/photos/8GzmzEyLNyc'>Bagle Image</a> by 
+                <a href='https://unsplash.com/@picoftasty'>Mae Mu</a>
+            </p>
+            <p>
+                <a href='https://unsplash.com/photos/RKDP3D-6G5E'>Tea Image</a> by 
+                <a href='https://unsplash.com/@teacora'>TeaCora Rooibos</a>
+            </p>
+            <p>
+                <a href='https://unsplash.com/photos/jn-HaGWe4yw'>Coffee Image</a> by 
+                <a href='https://unsplash.com/@jeremyyappy'>Jeremy Yap</a>
+            </p>
+        </div>
+
+        <p></p><!-- Spacing -->
+
+        <div class = 'footnotepage'> <!-- I don't own a bakery, but I do have a physical address. -->
+            <p>Ross Bakery</p>
+            <p>P.O.Box 148</p>
+            <p>Crystal Lake, IA</p>
+            <p>50432</p>
+            <p>Copyright © 20XX Company, LLC, All rights reserved.</p>
+        </div>
+    </body>
+    <script>
+            var oMain = document.getElementById('main');
+        var oPictures = // List out Items
+        [
+            {
+            name: "Bagle",
+            src: "https://images.unsplash.com/photo-1558745010-d2a3c21762ab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80",
+            price: "3"
+            },
+            {
+            name: "Tea",
+            src: "https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80",
+            price: "7"
+            },
+            {
+            name: "Coffee",
+            src: "https://images.unsplash.com/photo-1485808191679-5f86510681a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+            price: "11"
+            },
+        ];
+
+        for(let i = 0; i < oPictures.length; i++) // For each item make a division
+        {
+            var div = document.createElement("div"); // Var to make
+
+        div.innerHTML = // Division layout
+        `
+        <div class = 'display' style = 'width: 18ren;'>
+            <img src = '${oPictures[i].src}' 
+             class = 'display' 
+             alt = 'Broken Image'>
+            <h1 class = 'display'>
+                ${oPictures[i].name}
+                $${oPictures[i].price}</h1>
+            
+            <input id = 'value${i}' value = 0 type = 'number'>
+            <button class = 'display' id = 'Subtotal${i}'>Submit</button>
+        </div>
+        <p></p>
+        `;
+        oMain.appendChild(div);
+        }
+
+        main.addEventListener("click", // Button Prompts
+        function (e)
+        {
+            if(e.target.matches("button"))
+            {
+                var iTotalPrice = 0; // Initiate Variable
+                var sDisplay = document.getElementById('grandTotal');
+
+                for(let i = 0; i < oPictures.length; i++) // Loop all prices
+                {
+                    var iReset = document.getElementById('value'+i).value; // Get the Value of the Items
+                    var iTotal = parseInt(iReset); // Convert to Int
+
+                    var iCost = parseInt(oPictures[i].price); // Cost of the item
+                    iTotal *= iCost; // Multiply the Cost by the amount
+
+                    iTotalPrice += iTotal; // Total the Values
+                    console.log(iTotalPrice); // Console Display
+                    sDisplay.textContent = 'Your total is $'+iTotalPrice+'.'; // Alter Displayed Value
+                }
+                document.append(sDisplay); // Alter DOM
+            }
+        });
+    </script>
+</html>

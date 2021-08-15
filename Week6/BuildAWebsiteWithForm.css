@@ -1,0 +1,63 @@
+img.display
+        {
+        height: 100px;
+        width: 100px;
+        }
+        .footnotepage
+        {
+        width: 300px;
+        font-size: 10px;
+        /*font-family: 'Apple', cursive;*/
+        background-color: lightgrey;
+        padding: 10px;
+        }  
+        .headerpage
+        {
+        width: 300px;
+        font-size: 50px;
+        align-content: center;
+        color: rgb(0, 175, 255);
+        /*font-family: 'Apple', cursive;*/
+        background-color: rgb(155, 0, 125);
+        margin: 0 auto;
+        padding: 10px;
+        }
+        .mainpage
+        {
+        padding: 10px;
+        }
+    @media only screen and (max-width: 767px) /* Phone */
+    {
+        img.display
+        {
+        height: 100px;
+        width: 100px;
+        }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1365px) /* Tablet */
+    {
+        img.display
+        {
+        height: 200px;
+        width: 200px;
+        }
+        .footnotepage
+        {
+        align-content: center;
+        margin: 0 auto;
+        }
+    }
+    @media only screen and (min-width: 1366px) /* Computer */
+    {
+        img.display
+        {
+        height: 250px;
+        width: 250px;
+        }
+        .footnotepage
+        {
+        text-align: center;
+        align-content: center;
+        margin: 0 auto;
+        }
+    }
