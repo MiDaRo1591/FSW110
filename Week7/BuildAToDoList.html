@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- 
+https://www.w3schools.com/tags/default.asp
+-->
+<html lang="en-us">
+    <head>
+        <title>Build A Todo List</title>
+        
+    <!--    <link href = "styles.css" rel = "stylesheet"/> <!-- Link Style Sheet -->
+    </head>
+    <style>
+        .Notes
+        {
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        padding: 5px;
+        margin: 5px;
+        }
+        .footnotepage
+        {
+            width: 300px;
+            font-size: 10px;
+            /*font-family: 'Apple', cursive;*/
+            background-color: lightgrey;
+            padding: 10px;
+        }  
+        /* Styles can be added here.*/
+        @media only screen and (max-width: 767px) /* Phone */
+        {}
+        @media only screen and (min-width: 768px) and (max-width: 1365px) /* Tablet */
+        {}
+        @media only screen and (min-width: 1366px) and (max-width: 1919px) /* Computer */
+        {
+            .footnotepage
+            {
+            text-align: center;
+            align-content: center;
+            margin: 0 auto;
+            }
+        }
+        @media only screen and (max-width: 1920px) /* High Res*/
+        {}
+    </style>
+    <body>
+        <h1>Build A Todo List</h1>
+
+        <div class = "paper">
+            <img src = "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80"
+            height="300px" 
+            width ="190px"  
+            alt = "Load Fail Display Text"/>
+            
+            <input id = "LiveName" 
+                   type = "text" 
+                   placeholder = "Title"
+                   value = "Micah">
+
+            <textarea id = "LiveComment"
+            style="height:150px;width:185px;"
+            value = "Test Value"
+            ></textarea>
+
+            <button id = "submit" type = "button" onclick = "fSubmit()">Submit</button>
+        </div>
+
+        <div id = "Comments"></div>
+
+        <div class = 'footnotepage'> <!-- Give credit where it is due. -->
+            <p>
+                <a href='https://unsplash.com/photos/_kUxT8WkoeY'>Paper Image</a> by 
+                <a href='https://unsplash.com/@marjan_blan'>Marjan Blan</a>
+            </p>
+            <p>
+                <a href='https://www.w3schools.com/howto/howto_js_draggable.asp'>Draggable Element</a> by 
+                <a href='https://www.w3schools.com/'>W3 School</a>
+            </p>
+        </div>
+            
+    <!--    <script src = "JavaScript.js"></script> <!-- Link Javascript -->
+    </body>
+    <script>
+        // Javascript Go's Here
+        var sName = document.getElementById("LiveName");
+        var sComment = document.getElementById("LiveComment");
+        console.log("Log"+sComment.value);
+
+        function fSubmit()
+        {
+            console.log("Log "+sName.value);
+            console.log("Log "+sComment.value);
+            
+            if(sName.value !== "" && sComment.value !== "")
+            {
+            var eDiv = document.createElement("div");
+            var eP = document.createElement("p");
+            var eH5 = document.createElement("h5");
+            eDiv.className = "Notes";
+
+            eH5.textContent = sName.value+" Says : ";
+            eP.textContent = "Comments: "+sComment.value;
+
+            eDiv.appendChild(eH5);
+            eDiv.appendChild(eP);
+            document.getElementById("Comments").appendChild(eDiv);
+            }
+            else{alert("Add Name and Comment.")}
+        }
+
+    </script>
+</html>
