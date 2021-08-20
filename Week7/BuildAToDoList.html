@@ -25,9 +25,15 @@ https://www.w3schools.com/tags/default.asp
             width: 300px;
             font-size: 10px;
             /*font-family: 'Apple', cursive;*/
-            background-color: lightgrey;
+            background-color: blue;
             padding: 10px;
         }  
+        .paper
+        {
+            background-image:url("https://images.unsplash.com/photo-1586075010923-2dd4570fb338?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80");
+            height: 300px;
+            width: 190px;
+        }
         /* Styles can be added here.*/
         @media only screen and (max-width: 767px) /* Phone */
         {
@@ -58,18 +64,20 @@ https://www.w3schools.com/tags/default.asp
         <h1>Build A Todo List</h1>
 
         <div class = "paper">
+            <!--
             <img src = "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80"
             height="300px" 
             width ="190px"  
             alt = "Load Fail Display Text"/>
-            
+            -->
             <input id = "LiveName" 
+            style="background-color: rgba(255, 255, 255, 0);"
                    type = "text" 
                    placeholder = "Title"
                    value = "Micah">
 
             <textarea id = "LiveComment"
-            style="height:150px;width:185px;"
+            style="height:150px;width:185px;background-color: rgba(255, 255, 255, 0);"
             value = "Test Value"
             ></textarea>
 
@@ -83,44 +91,21 @@ https://www.w3schools.com/tags/default.asp
                 <a href='https://unsplash.com/photos/_kUxT8WkoeY'>Paper Image</a> by 
                 <a href='https://unsplash.com/@marjan_blan'>Marjan Blan</a>
             </p>
+            
             <p>
                 <a href='https://www.w3schools.com/howto/howto_js_draggable.asp'>Draggable Element</a> by 
                 <a href='https://www.w3schools.com/'>W3 School</a>
             </p>
+            
         </div>
             
-    <!--    <script src = "JavaScript.js"></script> <!-- Link Javascript -->
+        <script src = "JavaScript.js"></script> <!-- Link Javascript -->
     </body>
     <script>
-        // Javascript Go's Here
-        var sName = document.getElementById("LiveName");
-        var sComment = document.getElementById("LiveComment");
-        var iIdAdd = 0;
-        console.log("Log"+sComment.value);
-
-        function fSubmit()
-        {
-            console.log("Log "+sName.value);
-            console.log("Log "+sComment.value);
-            
-            if(sName.value !== "" && sComment.value !== "")
-            {
-            var eDiv = document.createElement("div");
-        //    var eP = document.createElement("p");
-            var eH5 = document.createElement("h5");
-
-            eDiv.className = "Notes_"+iIdAdd;
-            eDiv.style = 'height:300px;width:190px;float:left;border-style:solid;border-color:black;border-width:2px;padding:5px;margin:5px;background-image:url("https://images.unsplash.com/photo-1586075010923-2dd4570fb338?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80");'
-            eH5.textContent = sName.value+" Says : "+sComment.value;
-        //    eP.textContent = "Comments: "+sComment.value;
-
-            eDiv.appendChild(eH5);
-        //    eDiv.appendChild(eP);
-            document.getElementById("Comments").appendChild(eDiv);
-            iIdAdd ++;
-            }
-            else{alert("Add Name and Comment.")}
-        }
+        
+        //////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////
 
         /* Not My Scripts
         dragElement(document.getElementById("mydiv"));
