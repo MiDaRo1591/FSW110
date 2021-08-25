@@ -164,7 +164,7 @@ https://www.w3schools.com/tags/default.asp
             eButton.addEventListener("click", (e) =>{
             
                 fDelete(e.target)
-            });
+                });
 
             eH5.textContent = sName.value+" Says : "+sComment.value;
             eH5.id = "Content_"+iIdAdd;
@@ -225,7 +225,7 @@ https://www.w3schools.com/tags/default.asp
                 elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
             }
 
-            function closeDragElement() 
+            function closeDragElement()
             {
                 // stop moving when mouse button is released:
                 document.onmouseup = null;

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- 
+https://www.w3schools.com/tags/default.asp
+-->
+<html lang="en-us">
+    <head>
+        <title>Reflection Assignment</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Dancing Script         Font-family: 'Dancing Script', cursive;-->
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=WindSong&display=swap" rel="stylesheet">
+        <!-- Homemade Apple Font    Font-family: 'Apple', cursive;-->
+        <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Palette+Mosaic&display=swap" rel="stylesheet">
+        <!-- Monoton                Font-family: 'Monoton', cursive;-->
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+        <!-- <link href = "BurningTower.css" rel = "stylesheet"/> <!-- Link Style Sheet -->
+    </head>
+    <style>
+        /* Styles can be added here.*/
+        .block
+        {
+        width: 300px;
+        font-size: 15px;
+        font-family: 'Apple', cursive;
+        background-color: cornflowerblue;
+        margin: 15px;
+        padding: 10px;
+        }
+        .block:hover
+        {
+            cursor: pointer;
+            background-color: blue;
+        }
+        /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+        .displayhide
+        {
+            display: none;
+            margin: 15px;
+            padding: 10px;
+        }
+        .displayshow
+        {
+            display: inline;
+            margin: 15px;
+            padding: 10px;
+        }
+        /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+        .footnotepage
+        {           
+        position: sticky;
+        width: 300px;
+        font-size: 10px;
+        font-family: 'Apple', cursive;
+        background-color: lightgrey;
+        text-align: center;
+        align-content: center;
+        margin: 0 auto;
+        padding: 10px;   
+        bottom: 10px;
+        border: 3px solid black;
+        }
+        /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+        div.logopage
+        {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 50px 50px auto;
+        grid-template-rows: 50px 50px;
+        margin: 15px;
+        padding: 5px;
+        }
+        img.logopage
+        {
+        padding: 10px;
+        float: left;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        }
+        h1.logopage
+        {
+        color: maroon;
+        line-height: 25px;
+        font-family: 'Monoton', cursive;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        }
+        p.logopage
+        {
+        line-height: 25px;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        }
+        /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+        .maintextpage
+        {
+        margin: 25px;
+        }
+        p.maintextpage
+        {
+        font-family: 'Apple', cursive;
+        font-size: 15px;
+        }
+        /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+        .navbarpage 
+        {
+        background-color: lightgrey;
+        border: 1px solid gray;
+        }
+        .navbarpage > a 
+        {
+        width: 55px;
+        margin: 2px;
+        text-align: center;
+        font-size: 15px;
+        }
+        /*/////////////////////////////////////////////////////////////////////////////////////////////////*/
+        @media only screen and (max-width: 767px) /* Phone */
+        {
+            .navbarpage 
+            {
+            display: flex;
+            flex-wrap: wrap;
+            width: auto;
+            margin: 5px;
+            }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1365px) /* Tablet */
+        {
+            .navbarpage 
+            {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 600px;
+            margin: 15px;
+            }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1919px) /* Computer */
+        {
+            .navbarpage 
+            {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 600px;
+            margin: auto;
+            }
+        }
+    </style>
+    <body>
+    <!-- -------------------------------------------------------------------------------- -->
+    <div class = 'logopage'>
+        <a href = ''>
+            <img 
+            class = 'logopage'
+            src = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2102c27d-4398-44ae-9b15-8db1f3ed8512/dd4q7bv-d1c40742-c207-4ef6-8c65-8836124497bf.jpg/v1/fill/w_1920,h_3109,q_75,strp/burning_tower_of_notre_dame_de_paris_by_snowqueengh_dd4q7bv-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzEwOSIsInBhdGgiOiJcL2ZcLzIxMDJjMjdkLTQzOTgtNDRhZS05YjE1LThkYjFmM2VkODUxMlwvZGQ0cTdidi1kMWM0MDc0Mi1jMjA3LTRlZjYtOGM2NS04ODM2MTI0NDk3YmYuanBnIiwid2lkdGgiOiI8PTE5MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.qBoJ_0rFOivMMmPkWcdCqJsj2nUs1R6SHE61kjcMe28"
+            height = "100px"
+            width ="100px" 
+            alt = " Company Logo Here"
+            href = "www.google.com"
+            />
+        </a>
+        <h1 class = 'logopage'>Burning Tower</h1>
+        <p class = 'logopage'>Gaming, Worldbuilding, Coding, Maps, and More</p>
+    </div>
+    <!-- -------------------------------------------------------------------------------- -->
+    <div class = 'navbarpage'>
+        <a href = ''>Settings</a>
+        <a href = ''>Heros</a>
+        <a href = ''>Maps</a>
+        <a href = ''>Items</a>
+        <a href = ''>Abilities</a>
+        <a href = ''>Skills</a>
+        <a href = ''>Lore</a>
+        <a href = ''>Shop</a>
+        <a href = ''>About</a>
+        <a href = ''>Contact</a>
+    </div>
+    <!-- -------------------------------------------------------------------------------- -->
+    <div id = "" class = "maintextpage"></div>
+        <p class = "maintextpage">Reflect on the skills you gained these past 8 weeks, as well as other 
+            important takeaways you have from this class and how they apply to your future goals.
+            <br>Respond to the following questions:
+        </p>
+        <div id = "Question1" class = "block">
+            1) Learning how users interact with web applications is one of the most fundamental pieces of 
+            your web development toolbox. How is using JavaScript to interact with an application important? 
+            Just like your video explanations I would like to see and hear about some specific real world 
+            examples.
+        </div>
+        <div id = "Question1Display" class = "displayhide">
+            Currently I have been toying around with the idea of making a game based websight for me 
+            and my friends. I have been using the things I learn in class to help better understand 
+            how to incorperate elements with each other and ways to manipulate the coding. While the 
+            sight will most likly never be published, it has been neat to build and I even used it to 
+            complete assignments in my other class.
+        </div>
+        <div id = "Question2" class = "block">
+            2) You have seen a lot of hardships caused by not knowing about the DOM or JavaScript answered 
+            in this course (think event listeners instead of complex UI animations for navbar interactions). 
+            What were some of the things made easier by learning about DOM interactions? What was hard, 
+            difficult, or surprising to you and why?
+        </div>
+        <div id = "Question2Display" class = "displayhide">
+            I haven't realy tryed to build a web page before untill now. So the hardships are a bit alien 
+            still. Learning how to use listeners and building functions that can alter parts, or entire 
+            sections, of the page is interesting. 
+        </div>
+        <div id = "Question3" class = "block">
+            3) What do you feel was your biggest accomplishment in this course?
+        </div>
+        <div id = "Question3Display" class = "displayhide">
+            Grasping the idea of using listeners. I still don't fully understand them, but I have enough of 
+            an idea that I can alter my previous work and make some weird things happen. Like with the To-Do 
+            list, I never got them to work with array's, but I could alternate this to use ID's instead, and 
+            work around the problem that way. With more practice I hope to fully understand it.
+        </div>
+        <p class = "maintextpage">Complete your reflection in any format you choose. Here are some options:
+            <br><br>
+            >> <span style = "color:orange; background-color: black">A website summary (a mix of text and images): Push your code to Github, then copy/paste your URL here to submit it.</span> <<
+            <br><br>
+            A typed summary (1-2 paragraphs)
+            <br><br>
+            A video summary (1-3 minutes):  Record yourself as you reflect. You can use any recording device 
+            that is convenient for you. I recommend the Canvas Media Recording Tool. It is the easiest and 
+            most convenient tool to use because you record directly from this assignment page. 
+            <br>
+            Studio's Video Recording Tool is mobile friendly.
+            <br><br>
+            A comic strip or picture collage summary (5-10 graphics)
+            Upload your assignment by the due date.
+        </p>
+        <br> 
+    </div>
+    <!-- -------------------------------------------------------------------------------- -->
+    <div class = 'footnotepage'>
+        <p>
+            <a href='https://www.deviantart.com/snowqueengh/art/Burning-Tower-of-Notre-Dame-de-Paris-794001307'>Logo Image</a> by 
+            <a href='https://www.deviantart.com/snowqueengh'>SnowQueenGH</a>
+        </p>
+        <p>
+            <a href = "https://fonts.google.com/">Google Fonts</a> : 
+            <a href = "https://fonts.google.com/specimen/Homemade+Apple?query=app">Homemade Apple</a> , 
+            <a href = "https://fonts.google.com/specimen/Monoton?query=Monoton">Monoton</a> , 
+            <a href = "https://fonts.google.com/specimen/Dancing+Script?query=danc">Dancing Script</a>
+        </p>
+        <p>Copyright © 20XX Company, LLC, All rights reserved.</p>
+    </div>
+<!-- -------------------------------------------------------------------------------- --> 
+    <!--    <script src = "JavaScript.js"></script> <!-- Link Javascript -->
+    </body>
+    <script>
+        // Javascript Go's Here
+        function fHideShow(target)
+        {
+            var sID = target.id; // Target's ID
+            var eSwitch = document.getElementById(sID+"Display"); // Target of the Info Block
+            console.log("Element Pressed") // Test
+            if(target.id !== "") // If the Element Pressed has an ID
+            {
+                console.log("Element Found") // Test
+                if(target.iSwitch == true) // And the the Element var iSwitch is true
+                {
+                    console.log("Element Switched to: False") // Test
+                    eSwitch.setAttribute("class", "displayhide"); // Display Child Element
+                    target.iSwitch = false; // Set iSwitch to false
+                }
+                else // And the the Element var iSwitch is false
+                {
+                    console.log("Element Switched to: True") // Test
+                    eSwitch.setAttribute("class", "displayshow"); // Hide Child Element
+                    target.iSwitch = true; // Set iSwitch to true
+                }
+            }
+        }
+        document.addEventListener("click", (e) =>{fHideShow(e.target)}); // Target All Clicked Objects
+    </script>
+    </script>
+</html>

@@ -7,8 +7,8 @@ Git command for creating a save point for your current code to make it ready for
 git push
 Git command to send your code to github
 
-
-
+git pull
+Redownload the repository
 
 
 git status
